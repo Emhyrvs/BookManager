@@ -31,5 +31,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Books}/{action=Index}/{id?}");
+await PrepDbcs.PrepPopulation(app, true);
 
 app.Run();
